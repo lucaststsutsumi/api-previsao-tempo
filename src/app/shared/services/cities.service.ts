@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import * as JsSearch from 'js-search';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CityTypeaheadItem } from '../models/city-typeahead-item';
-import * as JsSearch from 'js-search';
+
 @Injectable({
   providedIn: 'root'
 })

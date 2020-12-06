@@ -121,7 +121,7 @@
         "check-typecast"
       ]
     },
-    "component-class-suffix": true,
+    "component-class-suffix": [true,"Component","Page"],
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
     "no-conflicting-lifecycle": true,
@@ -140,12 +140,14 @@
       true,
       "attribute",
       "app",
+      "ltst",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
       "app",
+      "ltst",
       "kebab-case"
     ]
   }
