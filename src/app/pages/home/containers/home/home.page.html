@@ -11,17 +11,20 @@
 
     <div class="form-gorup">
       <label>Pesquisar com <i>autocomplete</i></label>
+      <app-cities-typeahead [formControl]="searchControlWithAutocomplete"></app-cities-typeahead>
     </div>
 
   </div>
 
   <jv-loader *ngIf="loading$ | async"></jv-loader>
 
-  <div *ngIf="!(loading$ | async) && !(error$|async) && !!cityWeather">
-    <app-current-weather [cityWeather]="cityWeather" (toggleBookmark)="onToggleBookmark()"></app-current-weather>
+  <div *ngIf="!(loading$ | async) && !(error$ | async) && !!cityWeather">
+    <app-current-weather [cityWeather]="cityWeather" (toggleBookmark)="onToggleBookmark()"
+      [isBookmarked]="!!(isBookmarkFavorited$ | async)" [unit]="unit$|async">
+    </app-current-weather>
   </div>
 
-  <div *ngIf="!(loading$|async) && (error$|async)">
-    <b>Tentar novamente</b>
+  <div *ngIf="!(loading$|async) && (error$ | async)">
+    <a>Tentar novamente</a>
   </div>
 </div>

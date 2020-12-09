@@ -1,15 +1,15 @@
 <div class="card">
   <div class="card-body">
-
     <h2>{{ cityName }}</h2>
 
-    <app-detailed-weather [weather]="cityWeather?.weather"></app-detailed-weather>
+    <app-detailed-weather [weather]="cityWeather?.weather" [unit]="unit"></app-detailed-weather>
 
     <div class="card-actions">
       <a class="card-link" (click)="onToggleBookmark()">
-        adicionar aos favoritos
+        <span> {{isBookmarked ? 'Remover aos favoritos':'Adicionar aos favoritos'}} </span>
       </a>
-      <a class="card-link" routerLink="/details">
+      <a class="card-link" routerLink="/details"
+        [queryParams]="{ lat: cityWeather?.city?.coord?.lat, lon: cityWeather?.city?.coord?.lon }">
         Ver detalhes
       </a>
     </div>

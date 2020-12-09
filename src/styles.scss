@@ -3,7 +3,14 @@
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
-@import "~bootstrap/dist/css/bootstrap.min.css";
+//  @import "~bootstrap/dist/css/bootstrap.min.css";
+
+a:not([href]),
+a:not([href]):hover {
+  color: $primary;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .spinner {
   width: 40px;

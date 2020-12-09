@@ -13,7 +13,7 @@ export class CitiesService {
   constructor(private http: HttpClient) {
   }
 
-  getCities(query: string): Observable<CityTypeaheadItem[]> {
+  getCities(query: string): Observable<any[]> {
     return this.http.get<{ country: string }[]>('assets/db/cities.json')
       .pipe(
         map(cities => {

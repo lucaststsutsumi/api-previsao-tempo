@@ -4,9 +4,9 @@ export interface CityWeather {
 }
 
 export interface CityDailyWeather {
-  city: City;
-  current: Weather;
-  daily: DailyWeather[];
+  city: City | undefined;
+  current: Weather | undefined;
+  daily: DailyWeather[] | undefined;
 }
 
 export interface City {
@@ -32,8 +32,8 @@ export interface Weather {
 }
 
 export interface DailyWeather {
-  date: number;
-  weather: Weather;
+  date: number | undefined;
+  weather: Weather | undefined;
 }
 
 export interface Coord {
